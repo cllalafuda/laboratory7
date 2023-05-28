@@ -1,0 +1,4 @@
+admin password: 1234
+admin login: klalafuda
+
+разумеется, мы так не делаем. это всё для упрощения сдачи лаб

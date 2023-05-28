@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{{ post.title }}</title>
+    <link rel="stylesheet" href="{{ STATIC_URL }}/static/css/article.css">
+</head>
+
+<header>
+    <h2 class="main-page-button"><a href="/">Все статьи</a></h2>
+    <h2 class="registrate-page-button"><a href="/registrate">Зарегистрироваться</a></h2>
+</header>
+
+<body class="article">
+    <img src="{{ STATIC_URL }}/static/img/logo.png" alt="logo">
+    <h2>{{ post.title }}</h2>
+    <h4>{{ post.author }}</h4>
+    <h5>{{ post.created_date }}</h5>
+    <p>{{ post.text }}</p>
+</body>
+
+</html>

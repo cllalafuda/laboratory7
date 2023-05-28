@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Архив статей</title>
+    <link rel="stylesheet" href="{{ STATIC_URL }}static/css/article.css">
+</head>
+
+<header>
+    <h2 class="registrate-page-button"><a href="/registrate">Зарегистрироваться</a></h2>
+</header>
+
+<body class="archive">
+
+    <div class="header">
+        <img src="{{ STATIC_URL }}static/img/image.jpg" width="200" />
+    </div>
+    <div class="archive">
+        {% for post in posts %}
+        <div class="one-post">
+            <h2 class="post-title"><a href="{{ STATIC_URL }}/article/{{ post.id }}">{{ post.title }}</a></h2>
+            <div class="article-info">
+                <div class="article-author">{{ post.author.username }}</div>
+                <div class="article-created-date">{{ post.created_date }}</div>
+                <div class="fold-button-div"><a href="#" class="fold-button">свернуть</a></div>
+            </div>
+            <p class="article-text">{{ post.get_excerpt }}</p>
+        </div>
+        {% endfor %}
+
+    </div>
+    <script src="{{ STATIC_URL }}/static/js/helloworld.js"></script>
+    <script src="{{ STATIC_URL }}/static/js/fold-post.js"></script>
+</body>
+
+</html>
